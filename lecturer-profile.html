@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecturer Profile | StudyMate</title>
+  <link rel="stylesheet" href="Styles/StyleSheet.css" type="text/css">
+</head>
+<body class="light-mode">
+  <header>
+    <div class="header-container">
+      <h1>👨‍🏫 Lecturer Profile</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="lecturer-dashboard.html">Dashboard</a>
+        <a href="upload-lecture.html">Upload Materials</a>
+        <a href="lecturer-profile.html" class="active">Profile</a>
+        <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="lecturer-profile-container">
+    <section class="profile-header">
+      <div class="profile-info">
+        <div class="profile-pic">
+          <img src="Images/lecturer-avatar.jpg" alt="Lecturer profile" id="lecturer-image">
+          <button id="change-lecturer-photo" class="btn-small">Change Photo</button>
+          <input type="file" id="lecturer-photo-upload" accept="image/*" style="display: none;">
+        </div>
+        <div class="profile-main">
+          <h2 id="lecturer-name">Prof. Michael Chen</h2>
+          <p class="lecturer-title">Department of Computer Science</p>
+          <p class="lecturer-institution">University of South Africa</p>
+          <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-value">4.3 (87 reviews)</span>
+          </div>
+          <div class="profile-stats">
+            <div class="stat">
+              <span class="stat-number" id="courses-taught">14</span>
+              <span class="stat-label">Courses</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="materials-uploaded">237</span>
+              <span class="stat-label">Materials</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="students-taught">1,842</span>
+              <span class="stat-label">Students</span>
+            </div>
+          </div>
+        </div>
+        <div class="profile-actions">
+          <button id="edit-profile-btn" class="btn">Edit Profile</button>
+          <button id="view-courses-btn" class="btn">View Courses</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-content">
+      <div class="profile-section">
+        <h3>About Me</h3>
+        <p id="lecturer-bio">Professor of Computer Science with 15 years of teaching experience. Specialized in Artificial Intelligence, Machine Learning, and Data Structures. My research focuses on neural networks and their applications in natural language processing.</p>
+        <button id="edit-bio-btn" class="btn-small">Edit Bio</button>
+        <textarea id="bio-edit" class="hide" rows="4"></textarea>
+      </div>
+
+      <div class="profile-section">
+        <h3>Current Courses</h3>
+        <div class="courses-list" id="courses-container">
+          <!-- Courses will be loaded here -->
+        </div>
+        <button id="add-course-btn" class="btn-small">Add Course</button>
+      </div>
+
+      <div class="profile-section">
+        <h3>Research & Publications</h3>
+        <div class="publications-list" id="publications-container">
+          <!-- Publications will be loaded here -->
+        </div>
+        <button id="add-publication-btn" class="btn-small">Add Publication</button>
+      </div>
+
+      <div class="profile-section">
+        <h3>Office Hours</h3>
+        <div class="office-hours">
+          <div class="hours-grid">
+            <div class="day">Monday <span>10AM - 12PM</span></div>
+            <div class="day">Wednesday <span>2PM - 4PM</span></div>
+            <div class="day">Friday <span>10AM - 12PM</span></div>
+          </div>
+          <p class="office-location">Location: Computer Science Building, Room 205</p>
+          <button id="edit-office-hours-btn" class="btn-small">Edit Hours</button>
+        </div>
+      </div>
+
+      <div class="profile-section full-width">
+        <h3>Teaching Materials</h3>
+        <div class="materials-grid" id="materials-container">
+          <!-- Materials will be loaded here -->
+        </div>
+        <div class="materials-actions">
+          <button id="view-all-materials" class="btn-small">View All</button>
+          <button id="upload-material-btn" class="btn">Upload New</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add Course Modal -->
+  <div id="course-modal" class="modal hide">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Add New Course</h3>
+      <div class="form-group">
+        <label for="course-code">Course Code</label>
+        <input type="text" id="course-code" placeholder="e.g. CS401">
+      </div>
+      <div class="form-group">
+        <label for="course-name">Course Name</label>
+        <input type="text" id="course-name" placeholder="e.g. Advanced Machine Learning">
+      </div>
+      <div class="form-group">
+        <label for="course-semester">Semester</label>
+        <select id="course-semester">
+          <option value="spring">Spring 2023</option>
+          <option value="summer">Summer 2023</option>
+          <option value="fall">Fall 2023</option>
+          <option value="winter">Winter 2023</option>
+        </select>
+      </div>
+      <div class="modal-actions">
+        <button id="cancel-course" class="btn-small">Cancel</button>
+        <button id="save-course" class="btn">Save Course</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="JS/Scripts.js"></script>
+  
+</body>
+</html>

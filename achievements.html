@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements | StudyMate</title>
+  <link rel="stylesheet" href="Styles/StyleSheet.css" type="text/css">
+</head>
+<body class="light-mode">
+  <header>
+    <div class="header-container">
+      <h1>🏆 Achievements</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="feed.html">Feed</a>
+        <a href="quiz.html">Quizzes</a>
+        <a href="achievements.html" class="active">Achievements</a>
+        <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="achievements-container">
+    <section class="achievements-header">
+      <div class="level-display">
+        <div class="level-circle">
+          <span id="current-level">15</span>
+        </div>
+        <div class="level-info">
+          <h3>Current Level</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 65%"></div>
+          </div>
+          <p><span id="current-xp">1,250</span>/<span id="next-level-xp">2,000</span> XP</p>
+        </div>
+      </div>
+      <div class="achievements-stats">
+        <div class="stat">
+          <span class="stat-number" id="total-badges">24</span>
+          <span class="stat-label">Badges Earned</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" id="streak-days">15</span>
+          <span class="stat-label">Day Streak</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" id="leaderboard-rank">42</span>
+          <span class="stat-label">Global Rank</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="achievements-tabs">
+      <button class="tab-btn active" data-tab="badges">Badges</button>
+      <button class="tab-btn" data-tab="milestones">Milestones</button>
+      <button class="tab-btn" data-tab="leaderboard">Leaderboard</button>
+    </section>
+
+    <section class="achievements-content">
+      <div class="tab-content active" id="badges-tab">
+        <h3>Your Badges</h3>
+        <div class="badges-grid">
+          <!-- Badges will be loaded here -->
+        </div>
+      </div>
+      
+      <div class="tab-content" id="milestones-tab">
+        <h3>Milestones</h3>
+        <div class="milestones-list">
+          <!-- Milestones will be loaded here -->
+        </div>
+      </div>
+      
+      <div class="tab-content" id="leaderboard-tab">
+        <h3>Top Learners</h3>
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Level</th>
+              <th>XP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Leaderboard will be loaded here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="JS/Scripts.js"></script>
+</body>
+</html>

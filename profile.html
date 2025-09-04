@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | StudyMate</title>
+  <link rel="stylesheet" href="Styles/StyleSheet.css" type="text/css">
+</head>
+<body class="light-mode">
+  <header>
+    <div class="header-container">
+      <h1>👤 My Profile</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="feed.html">Feed</a>
+        <a href="quiz.html">Quizzes</a>
+        <a href="progress.html">Progress</a>
+        <a href="profile.html" class="active">Profile</a>
+        <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="profile-container">
+    <section class="profile-header">
+      <div class="profile-pic">
+        <img src="Images/default-avatar.jpg" alt="Profile picture" id="profile-image">
+        <div class="photo-actions">
+          <button id="change-photo-btn" class="btn-small">Change Photo</button>
+          <a href="edit-profile.html"><button id="change-photo-btn" class="btn-small">Edit Profile</button></a>
+          <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+        </div>
+      </div>
+      
+      <div class="profile-info">
+        <h2 id="username">Gift Rametsi</h2>
+        <p class="user-title">Computer Science Student</p>
+        <p class="user-school">University of South Africa</p>
+        
+        <div class="profile-stats">
+          <div class="stat">
+            <span class="stat-number" id="study-hours">142</span>
+            <span class="stat-label">Study Hours</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" id="quizzes-taken">38</span>
+            <span class="stat-label">Quizzes Taken</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" id="streak-days">15</span>
+            <span class="stat-label">Day Streak</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-content">
+      <div class="profile-section">
+        <h3>About Me</h3>
+        <p id="user-bio">Passionate student and lifelong learner. Currently focused on web development and AI technologies.</p>
+        <button id="edit-bio-btn" class="btn-small">Edit Bio</button>
+        <textarea id="bio-edit" class="hide" rows="3"></textarea>
+        
+        <div class="social-links">
+          <h4>Connect With Me</h4>
+          <div class="social-icons">
+            <a href="#" class="social-link twitter" aria-label="Twitter">
+              <img src="https://images.icon-icons.com/4029/PNG/512/twitter_x_new_logo_x_rounded_icon_256078.png" alt="Twitter">
+            </a>
+            <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+              <img src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk4Mi1kMy0xMC5wbmc.png" alt="LinkedIn">
+            </a>
+            <a href="#" class="social-link github" aria-label="GitHub">
+              <img src="https://icon2.cleanpng.com/20180419/wvq/avukik7am.webp" alt="GitHub">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-section">
+        <h3>My Skills</h3>
+        <div class="skills-container" id="skills-list">
+          <!-- Skills will be loaded dynamically -->
+        </div>
+        <div class="skill-actions">
+          <button id="add-skill-btn" class="btn-small">Add Skill</button>
+          <button id="test-skills-btn" class="btn-small">Test My Skills</button>
+        </div>
+      </div>
+
+      <div class="profile-section">
+        <h3>My Network</h3>
+        <div class="connections-container">
+          <div class="connection-count">
+            <span class="count" id="follower-count">127</span> Followers • 
+            <span class="count" id="following-count">84</span> Following
+          </div>
+          <div class="connection-grid" id="friends-list">
+            <!-- Friends will be loaded dynamically -->
+          </div>
+          <div class="connection-actions">
+            <button id="view-all-friends" class="btn-small">View All</button>
+            <button id="find-friends" class="btn-small">Find Friends</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-section full-width">
+        <div class="section-header">
+          <h3>Detailed Activity History</h3>
+          <div class="activity-filters">
+            <select id="activity-filter">
+              <option value="all">All Activities</option>
+              <option value="quiz">Quizzes</option>
+              <option value="study">Study Sessions</option>
+              <option value="note">Shared Notes</option>
+            </select>
+            <button id="export-activity" class="btn-small">Export</button>
+          </div>
+        </div>
+        <div class="table-container">
+          <table class="activity-table" id="activity-history">
+            <thead>
+              <tr>
+                <th data-sort="date">Date ▼</th>
+                <th data-sort="type">Activity Type</th>
+                <th data-sort="duration">Duration</th>
+                <th data-sort="details">Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Activities will be loaded dynamically -->
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button id="prev-page" disabled>Previous</button>
+          <span id="page-info">Page 1 of 3</span>
+          <button id="next-page">Next</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 StudyMate. Built by Gift Rametsi.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for image cropping -->
+  <div id="avatar-modal" class="modal hide">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Crop Your Profile Picture</h3>
+      <div class="image-cropper">
+        <img id="image-to-crop" src="" alt="Crop preview">
+      </div>
+      <button id="save-crop" class="btn">Save Changes</button>
+    </div>
+  </div>
+
+  <script src="JS/Scripts.js"></script>
+  <script>
+  const toggleBtn = document.getElementById('dark-mode-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+</body>
+</html>

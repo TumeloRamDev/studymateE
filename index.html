@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyMate | Home</title>
+  <link rel="stylesheet" href="Styles/StyleSheet.css">
+</head>
+<body>
+  <header>
+     <div class="header-container">
+    <h1>TStudyMate</h1>
+    <nav>
+      <a href="feed.html">Feed</a>
+      <a href="quiz.html">Quizzes</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="lecturer-dashboard.html">Lecturer Portal</a>
+      <a href="tutor-dashboard.html">Tutor Portal</a>
+      <a href="profile.html">Profile</a>
+       <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+     </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="card-box">
+      <h2>Welcome to StudyMate 🎓</h2>
+      <p>Your AI-powered social study assistant. Summarize documents, track your progress, connect with tutors, and join study events!</p>
+      <a href="login.html" class="btn">Student</a>
+      <a href="login.html" class="btn">Lecturer</a>
+      <a href="login.html" class="btn">Tutor</a>
+      </div>
+      
+    </section>
+    <section class="info-section">
+  <div class="info-content">
+    <h2>Why StudyMate?</h2>
+    <p>
+      StudyMate was built to solve a growing problem among students and educators—disorganization, lack of motivation, and scattered study tools. In today’s fast-paced academic environment, students often struggle to keep track of their study material, assignments, quiz preparation, and meaningful academic progress. That’s where StudyMate steps in.
+    </p>
+    
+    <h2>What is StudyMate?</h2>
+    <p>
+      StudyMate is your AI-powered social study assistant. It helps you upload and summarize your notes, track your study time and progress, connect with classmates, tutors, and lecturers, and even participate in community events and academic challenges—all in one secure, organized platform.
+    </p>
+
+    <h2>Who is it for?</h2>
+    <ul>
+      <li><strong>Students:</strong> Stay focused, summarize notes, track progress, and study smarter.</li>
+      <li><strong>Lecturers:</strong> Upload course content, monitor student engagement, and share resources.</li>
+      <li><strong>Tutors:</strong> Help students directly through the Tutor Portal, share knowledge, and host sessions.</li>
+    </ul>
+
+    <h2>How Does StudyMate Benefit You?</h2>
+    <ul>
+      <li>✅ All your study documents and notes in one place</li>
+      <li>✅ Personalized study tracking and quiz scoring</li>
+      <li>✅ AI summaries and explanations to simplify any topic</li>
+      <li>✅ Connect with your academic community</li>
+      <li>✅ Join study challenges and track leaderboards</li>
+    </ul>
+
+    <p>
+      Whether you're preparing for exams, catching up on missed lectures, or collaborating with others — StudyMate is the smart way to study.
+    </p>
+  </div>
+</section>
+
+
+    <section class="features">
+      <div class="card-box">
+        <h3>📄 Upload & Summarize</h3>
+        <p>Let AI help you extract notes, explanations, and quizzes from any study document.</p>
+      </div>
+      <div class="card-box">
+        <h3>📈 Track Progress</h3>
+        <p>View study time, completed tasks, and quiz scores on your personal dashboard.</p>
+      </div>
+      <div class="card-box">
+        <h3>🌍 Join the Community</h3>
+        <p>Share achievements, compete in challenges, and connect with fellow students.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 StudyMate. Built by Gift Rametsi.</p>
+  </footer>
+  <script src="JS/Scripts.js"></script>
+   <script>
+  const toggleBtn = document.getElementById('dark-mode-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+</body>
+</html>

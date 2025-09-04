@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutor Profile | StudyMate</title>
+  <link rel="stylesheet" href="Styles/StyleSheet.css" type="text/css">
+</head>
+<body class="light-mode">
+  <header>
+    <div class="header-container">
+      <h1>👨‍🏫 Tutor Profile</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="tutor-dashboard.html">Dashboard</a>
+        <a href="tutor-schedule.html">Schedule</a>
+        <a href="tutor-profile.html" class="active">Profile</a>
+        <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tutor-profile-container">
+    <section class="profile-header">
+      <div class="profile-info">
+        <div class="profile-pic">
+          <img src="Images/tutor-avatar.jpg" alt="Tutor profile" id="tutor-image">
+          <button id="change-tutor-photo" class="btn-small">Change Photo</button>
+          <input type="file" id="tutor-photo-upload" accept="image/*" style="display: none;">
+        </div>
+        <div class="profile-main">
+          <h2 id="tutor-name">Dr. Sarah Johnson</h2>
+          <p class="tutor-title">Mathematics Tutor</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-value">4.9 (128 reviews)</span>
+          </div>
+          <div class="profile-stats">
+            <div class="stat">
+              <span class="stat-number" id="sessions-completed">427</span>
+              <span class="stat-label">Sessions</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="students-helped">183</span>
+              <span class="stat-label">Students</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="response-time">2</span>
+              <span class="stat-label">Avg. Response (hrs)</span>
+            </div>
+          </div>
+        </div>
+        <div class="profile-actions">
+          <button id="edit-profile-btn" class="btn">Edit Profile</button>
+          <button id="view-calendar-btn" class="btn">View Calendar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-content">
+      <div class="profile-section">
+        <h3>About Me</h3>
+        <p id="tutor-bio">PhD in Mathematics with 8 years of tutoring experience. Specialized in Calculus, Linear Algebra, and Statistics. My teaching approach focuses on building strong foundational knowledge while making complex concepts accessible.</p>
+        <button id="edit-bio-btn" class="btn-small">Edit Bio</button>
+        <textarea id="bio-edit" class="hide" rows="4"></textarea>
+      </div>
+
+      <div class="profile-section">
+        <h3>Subjects Taught</h3>
+        <div class="subjects-list" id="subjects-container">
+          <!-- Subjects will be loaded here -->
+        </div>
+        <div class="subject-actions">
+          <button id="add-subject-btn" class="btn-small">Add Subject</button>
+          <button id="edit-subjects-btn" class="btn-small">Edit Subjects</button>
+        </div>
+      </div>
+
+      <div class="profile-section">
+        <h3>Availability</h3>
+        <div class="availability-calendar">
+          <div class="calendar-header">
+            <h4>Weekly Schedule</h4>
+            <button id="edit-availability-btn" class="btn-small">Edit Availability</button>
+          </div>
+          <div class="calendar-grid">
+            <div class="day">Mon <span>9AM - 5PM</span></div>
+            <div class="day">Tue <span>9AM - 5PM</span></div>
+            <div class="day">Wed <span>9AM - 5PM</span></div>
+            <div class="day">Thu <span>9AM - 5PM</span></div>
+            <div class="day">Fri <span>9AM - 1PM</span></div>
+            <div class="day">Sat <span>Not Available</span></div>
+            <div class="day">Sun <span>Not Available</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-section">
+        <h3>Qualifications & Certifications</h3>
+        <div class="qualifications-list" id="qualifications-container">
+          <!-- Qualifications will be loaded here -->
+        </div>
+        <button id="add-qualification-btn" class="btn-small">Add Qualification</button>
+      </div>
+
+      <div class="profile-section full-width">
+        <h3>Student Reviews</h3>
+        <div class="reviews-container" id="reviews-list">
+          <!-- Reviews will be loaded here -->
+        </div>
+        <div class="review-pagination">
+          <button id="prev-review" class="btn-small" disabled>Previous</button>
+          <span id="review-page-info">Page 1 of 5</span>
+          <button id="next-review" class="btn-small">Next</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add Subject Modal -->
+  <div id="subject-modal" class="modal hide">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Add Teaching Subject</h3>
+      <div class="form-group">
+        <label for="subject-name">Subject Name</label>
+        <input type="text" id="subject-name" placeholder="e.g. Advanced Calculus">
+      </div>
+      <div class="form-group">
+        <label for="subject-level">Level</label>
+        <select id="subject-level">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+          <option value="university">University</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="subject-rate">Hourly Rate ($)</label>
+        <input type="number" id="subject-rate" min="10" max="200" value="50">
+      </div>
+      <div class="modal-actions">
+        <button id="cancel-subject" class="btn-small">Cancel</button>
+        <button id="save-subject" class="btn">Save Subject</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="JS/Scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile | StudyMate</title>
+  <link rel="stylesheet" href="Styles/StyleSheet.css" type="text/css">
+</head>
+<body class="light-mode">
+  <header>
+    <div class="header-container">
+      <h1>✏️ Edit Profile</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="edit-profile.html" class="active">Edit Profile</a>
+        <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="edit-profile-container">
+    <form id="profile-form">
+      <section class="profile-picture-section">
+        <h3>Profile Picture</h3>
+        <div class="profile-pic-edit">
+          <img src="Images/default-avatar.jpg" alt="Current profile" id="current-profile-pic">
+          <div class="pic-actions">
+            <button type="button" id="change-profile-pic" class="btn-small">Change Photo</button>
+            <input type="file" id="profile-pic-upload" accept="image/*" style="display: none;">
+            <button type="button" id="remove-profile-pic" class="btn-small">Remove</button>
+          </div>
+        </div>
+      </section>
+      
+      <section class="basic-info-section">
+        <h3>Basic Information</h3>
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" required>
+        </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" required>
+        </div>
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <textarea id="bio" rows="4"></textarea>
+        </div>
+      </section>
+      
+      <section class="education-section">
+        <h3>Education</h3>
+        <div class="form-group">
+          <label for="institution">Institution</label>
+          <input type="text" id="institution">
+        </div>
+        <div class="form-group">
+          <label for="field-of-study">Field of Study</label>
+          <input type="text" id="field-of-study">
+        </div>
+        <div class="form-group">
+          <label for="education-level">Education Level</label>
+          <select id="education-level">
+            <option value="">Select Level</option>
+            <option value="high-school">High School</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="graduate">Graduate</option>
+            <option value="phd">PhD</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </section>
+      
+      <section class="social-links-section">
+        <h3>Social Links</h3>
+        <div class="form-group">
+          <label for="twitter">Twitter</label>
+          <input type="url" id="twitter" placeholder="https://twitter.com/username">
+        </div>
+        <div class="form-group">
+          <label for="linkedin">LinkedIn</label>
+          <input type="url" id="linkedin" placeholder="https://linkedin.com/in/username">
+        </div>
+        <div class="form-group">
+          <label for="github">GitHub</label>
+          <input type="url" id="github" placeholder="https://github.com/username">
+        </div>
+      </section>
+      
+      <section class="privacy-section">
+        <h3>Privacy Settings</h3>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="show-profile-public">
+          <label for="show-profile-public">Make profile public</label>
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="show-activity-feed">
+          <label for="show-activity-feed">Show my activity in public feed</label>
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="allow-messages">
+          <label for="allow-messages">Allow messages from other users</label>
+        </div>
+      </section>
+      
+      <div class="form-actions">
+        <button type="button" id="cancel-edit" class="btn">Cancel</button>
+        <button type="submit" id="save-profile" class="btn">Save Changes</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="JS/Scripts.js"></script>
+</body>
+</html>

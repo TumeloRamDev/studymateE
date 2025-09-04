@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload | StudyMate</title>
+  <link rel="stylesheet" href="Styles/StyleSheet.css" type="text/css">
+</head>
+<body class="light-mode">
+  <header>
+    <div class="header-container">
+      <h1>📤 Upload</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="upload.html" class="active">Upload</a>
+        <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="upload-container">
+    <section class="upload-options">
+      <div class="option-card" data-option="notes">
+        <div class="option-icon">📝</div>
+        <h3>Upload Notes</h3>
+        <p>Share your study notes with the community</p>
+      </div>
+      
+      <div class="option-card" data-option="material">
+        <div class="option-icon">📚</div>
+        <h3>Study Material</h3>
+        <p>Upload textbooks, slides, or other resources</p>
+      </div>
+      
+      <div class="option-card" data-option="assignment">
+        <div class="option-icon">📋</div>
+        <h3>Assignments</h3>
+        <p>Share completed assignments as examples</p>
+      </div>
+    </section>
+    
+    <section class="upload-form hide" id="upload-form">
+      <h2 id="upload-title">Upload Notes</h2>
+      
+      <form id="file-upload-form">
+        <div class="form-group">
+          <label for="file-upload">Select File</label>
+          <input type="file" id="file-upload" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="upload-title">Title</label>
+          <input type="text" id="upload-title-input" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="upload-description">Description</label>
+          <textarea id="upload-description" rows="4"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="upload-subject">Subject</label>
+          <select id="upload-subject" required>
+            <option value="">Select Subject</option>
+            <option value="math">Mathematics</option>
+            <option value="science">Science</option>
+            <option value="cs">Computer Science</option>
+            <option value="engineering">Engineering</option>
+            <option value="humanities">Humanities</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="upload-tags">Tags (comma separated)</label>
+          <input type="text" id="upload-tags" placeholder="calculus, algebra, math101">
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="make-public">
+          <label for="make-public">Make this public to all users</label>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" id="cancel-upload" class="btn">Cancel</button>
+          <button type="submit" id="submit-upload" class="btn">Upload</button>
+        </div>
+      </form>
+    </section>
+    
+    <section class="upload-preview hide" id="upload-preview">
+      <h3>Upload Successful!</h3>
+      <div class="preview-card">
+        <!-- Preview will be shown here -->
+      </div>
+      <div class="preview-actions">
+        <button id="view-upload" class="btn">View Upload</button>
+        <button id="new-upload" class="btn-small">Upload Another</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="JS/Scripts.js"></script>
+</body>
+</html>

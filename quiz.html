@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyMate Quiz</title>
+  <link rel="stylesheet" href="Styles/StyleSheet.css" type="text/css">
+</head>
+<body>
+  <header>
+     <div class="header-container">
+    <h1>🧠 StudyMate Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="progress.html">Progress</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="profile.html">Profile</a>
+      <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+     </div>
+  </header>
+
+  <main>
+    <section class="quiz-container">
+      <div class="quiz-header">
+        <h2>Test Your Knowledge</h2>
+        <div class="quiz-stats">
+          <span id="question-counter">Question 1 of 5</span>
+          <span id="score">Score: 0</span>
+        </div>
+      </div>
+
+      <div id="question-container">
+        <div id="question">Loading question...</div>
+        <div id="answer-buttons" class="btn-grid">
+          <!-- Answer buttons will be inserted here by JavaScript -->
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn">Start Quiz</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+      </div>
+
+      <div id="results" class="hide">
+        <h3>Your Results</h3>
+        <p id="result-text"></p>
+        <button id="restart-btn" class="btn">Restart Quiz</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 StudyMate. Built by Gift Rametsi.</p>
+  </footer>
+
+  <script src="JS/Scripts.js"></script>
+     <script>
+  const toggleBtn = document.getElementById('dark-mode-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+</body>
+</html>

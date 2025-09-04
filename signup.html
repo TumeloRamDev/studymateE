@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | StudyMate</title>
+    <link rel="stylesheet" href="Styles/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <h1>Study<span>Mate</span></h1>
+            <p>Your personal learning companion</p>
+        </div>
+
+        <div class="auth-tabs">
+            <button class="tab-btn" data-tab="login" onclick="window.location.href='login.html'">Login</button>
+            <button class="tab-btn active" data-tab="signup">Sign Up</button>
+        </div>
+
+        <form id="signup-form" class="auth-form active">
+            <div class="form-group">
+                <label for="signup-name">Full Name</label>
+                <input type="text" id="signup-name" placeholder="Rametsi Tumelo" required>
+                <div class="error-message" id="signup-name-error"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" placeholder="Tumelo@example.com" required>
+                <div class="error-message" id="signup-email-error"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" placeholder="••••••••" required>
+                <div class="error-message" id="signup-password-error"></div>
+                <div class="password-strength">
+                    <span class="strength-bar"></span>
+                    <span class="strength-bar"></span>
+                    <span class="strength-bar"></span>
+                    <span class="strength-text">Password strength</span>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="signup-confirm">Confirm Password</label>
+                <input type="password" id="signup-confirm" placeholder="••••••••" required>
+                <div class="error-message" id="signup-confirm-error"></div>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms-agree" required>
+                <label for="terms-agree">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+            
+            <button type="submit" class="btn-primary">Create Account</button>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Log in</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="backend/routes/auth.js"></script>
+      <script>
+  const toggleBtn = document.getElementById('dark-mode-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+</body>
+</html>
